@@ -1,8 +1,9 @@
 const express               = require('express');
 const app                   = express();
 
-
-
+const db = require('./config/mongoose');
+// For Post Requests
+app.use(express.urlencoded());
 // setting up view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');

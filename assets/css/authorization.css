@@ -146,6 +146,8 @@ button[type="submit"] {
     border-radius: 40px;
     margin: 15px 0;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 /* sign-up-text */
