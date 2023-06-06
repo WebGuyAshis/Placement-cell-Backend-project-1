@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+/* Homepage */
+.homepage{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 7vh;
+    /* background-color: rgb(0, 0, 0, 0.4); */
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* logo design */
+.logo{
+    color: rgb(224, 224, 224);
+    margin-left: 50px;
+    font-size: 30px;
+    font-family: 'Cherry Bomb One';
+}
+.logo-first{
+    color: orangered;
+}
+
+/* nav list items */
+.nav-list{
+    display: flex;
+    margin-right: 10px;
+}
+
+.nav-list-items{
+    margin: 0 10px;
+    list-style: none;
+    font-size: 18px;
+}
+.nav-list-items:hover{
+    cursor: pointer;
+    color: orangered;
+    font-weight: 900;
+}
+/* Homepage */
+.homepage{
+    height: 100vh;
+    width: 100vw;
+    
+}
+/* Welcome Text */
+.welcome-text{
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 15%;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    display: flex;
+    flex-direction: column;
+    /* background-color: aliceblue; */
+}
+.greet-msg{
+    font-size: 90px;
+    color: rgb(229, 229, 229);
+}
+.site-name{
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+.quote{
+    color: rgb(221, 221, 221, 0.8);
+    font-size: 20px;
+}
+/* Authorization */
+.authorization{
+    display: flex;
+    width: 350px;
+    margin: auto;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 600;
+}
+.sign-in{
+    padding: 8px 10px;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid white;
+    transition: 0.2s;
+    text-decoration: none;
+}
+.sign-in:hover{
+        color: orangered;
+        background-color: rgb(255, 255, 255);
+        transition: 0.2s;
+        cursor: pointer;
+}
+.sign-up{
+    padding: 8px 10px;
+    background-color: rgb(241, 255, 250);
+    border-radius: 6px;
+    text-decoration: none;
+    color: rgb(45, 45, 45);
+}
+.sign-up:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(75, 31, 31);
+    transition: 0.2s;
+    cursor: pointer;
+}
+/* Background Image */
+.home-background{
+    height: 100%;
+    width: 100%;  
+    overflow: hidden;  
+    background: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent);
+}
+.home-background::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/bg-1.jpeg');
+    background-size: cover;
+    z-index: -1;
+}

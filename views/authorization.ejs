@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./css/authorization.css">
+    <title>
+        <%= title%>
+    </title>
+
+</head>
+
+<body>
+
+    <div class="authorization-container">
+        <div class="authorize-container">
+            <div class="authorize-form">
+                <div class="logo-authorization-page">
+                    <span class="logo-first">C</span>AREERLAND
+                </div>
+
+                <div class="language">
+                    <div class="eng lang-btn">
+                        <img src="../images/usa.png" alt="">
+                        En
+                    </div>
+                    <div class="hindi lang-btn">
+                        <img src="../images/india.png" alt="">
+                        Hin
+                    </div>
+                </div>
+
+                <div class="login-page-text">
+                    Hi there!
+                    <div class="login-page-quote">
+                        Welcome to CareerLand, explore the best careers!
+                    </div>
+                </div>
+
+                <div class="sign-in-google">
+                    <img src="../images/google.png" alt="">
+                    Continue with Google
+                </div>
+
+                <span class="partition">
+                    or
+                </span>
+
+                <form class="login-form" action="" method="post">
+                    <label for="email">Username</label>
+                    <input placeholder="abc@gmail.com" type="email" name="email" id="" required>
+
+                    <label for="password">Password</label>
+                    <input placeholder="Password" type="password" name="password" id="" required>
+
+                    <div class="forgot-password">
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <button class="submit" type="submit">Log In</button>
+
+                    <div class="sign-up-text">
+                        Don't have an account? <span class="signup-btn">Sign up</span>
+                    </div>
+                </form>
+
+
+            </div>
+
+            <div class="authorize-img">
+
+            </div>
+
+            <div class="authorize-create">
+                <div class="logo-authorization-page">
+                    <span class="logo-first">C</span>AREERLAND
+                </div>
+
+                <div class="language">
+                    <div class="eng lang-btn">
+                        <img src="../images/usa.png" alt="">
+                        En
+                    </div>
+                    <div class="hindi lang-btn">
+                        <img src="../images/india.png" alt="">
+                        Hin
+                    </div>
+                </div>
+                <div class="create-account-greet">
+                    Create Your Account
+                    <p>We'd be happy to have you!</p>
+                </div>
+
+                <form action="" method="post" class="create-account-form">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Monkey D Luffy" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="abc@gmail.com" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" required>
+
+                    <button type="submit">Create Your Account</button>
+                </form>
+                <div class="sign-up-text">
+                    Already have an account? <span class="signin-btn">Log In</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/authorization.js"></script>
+</body>
+
+</html>

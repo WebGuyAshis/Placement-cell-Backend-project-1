@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(66, 66, 66);
+}
+.authorization-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.authorize-container{
+    height: 80vh;
+    width: 80vw;
+    max-width: 800px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.authorize-form{
+    width: 50%;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aquamarine; */
+    /* display: none; */
+}
+
+/* logo authorization */
+.logo-authorization-page{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    font-family: 'Cherry Bomb One';
+}
+.logo-first{
+    color: orangered;
+}
+
+/* Language */
+
+.language{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 35px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgb(255, 251, 251);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.language:hover{
+    height: 70px;
+    transition: 0.7s;
+    border-radius: 10px;
+}
+.lang-btn{
+    width: 70px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lang-btn:hover{
+    background-color: rgb(230, 230, 230);
+}
+.lang-btn > img{
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+/* login-page-text */
+.login-page-text{
+    text-align: center;
+    font-size: 70px;
+}
+.login-page-quote{
+    font-size: 13px;
+}
+
+/* google btn */
+
+.sign-in-google{
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 8px;
+    height: 42px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.sign-in-google > img{
+    height: 18px;
+    margin-right:10px;
+}
+/* login form */
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+form input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 0 10px;
+}
+
+form input::placeholder{
+    color: rgb(190, 190, 190);
+}
+/* forgot password */
+.forgot-password{
+    font-size: 13px;
+    text-align: end;
+}
+.forgot-password a{
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+}
+
+button[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* sign-up-text */
+.sign-up-text{
+    text-align: end;
+    font-size: 13px;
+}
+.sign-up-text > span{
+    color: rgb(0, 85, 255);
+    cursor: pointer;
+}
+
+
+
+/* Create */
+.authorize-create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    width: 50%;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+}
+.create-account-greet{
+    width: 300px;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.create-account-greet p{
+    font-size: 15px;
+}
+
+.create-account-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.authorize-img{
+    /* display: none; */
+    width: 50%;
+    /* height: 100%; */
+    background-image: url('../images/anime-boy.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
