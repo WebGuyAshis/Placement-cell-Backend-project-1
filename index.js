@@ -2,6 +2,18 @@ const express               = require('express');
 const app                   = express();
 
 const db = require('./config/mongoose');
+const path = require('path');
+
+const session = require('express-session');
+const MongoStore = require('connect-mongo'); // pass session as an argument here
+
+// Using Passport js
+const passport = require('passport');
+const passportLocal = require('./config/passport-local-strategy');
+
+const assetsPath = path.join(__dirname, 'assets');
+app.use('/assets', express.static(assetsPath));
+
 // For Post Requests
 app.use(express.urlencoded());
 // setting up view engine
@@ -9,7 +21,25 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // Linking assets
-app.use(express.static('assets'));
+
+app.use(session({
+    name:'Placement Cell',
+    // Change the secret before deployment
+    secret:'blahblahblah',
+    saveUninitialized: false,
+    resave: false,
+    cookie:{
+        maxAge: (1000*60*100),
+    },
+    store: MongoStore.create({
+        mongoUrl: 'mongodb://127.0.0.1:27017/Placement-Cell',
+        autoRemove: 'disabled'
+    }),
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(passport.setAuthenticatedUser);
 
 // Routes
 app.use('/', require('./routes'));

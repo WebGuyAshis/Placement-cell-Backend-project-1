@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     <!-- Custom Css -->
-    <link rel="stylesheet" href="./css/authorization.css">
+    <link rel="stylesheet" href="./assets/css/authorization.css">
     <title>
         <%= title%>
     </title>
@@ -57,7 +57,7 @@
                     or
                 </span>
 
-                <form class="login-form" action="" method="post">
+                <form class="login-form" action="/employee/create-session" method="post">
                     <label for="email">Username</label>
                     <input placeholder="abc@gmail.com" type="email" name="email" id="" required>
 
@@ -102,7 +102,7 @@
                     <p>We'd be happy to have you!</p>
                 </div>
 
-                <form action="/authorization/createEmployee" method="post" class="create-account-form">
+                <form action="/employee/createEmployee" method="post" class="create-account-form">
                     <label for="name">Full Name</label>
                     <input type="text" placeholder="Monkey D Luffy" name="EmployeeName" required>
 
@@ -121,7 +121,7 @@
 
         </div>
     </div>
-    <script src="./js/authorization.js"></script>
+    <script src="./assets/js/authorization.js"></script>
 </body>
 
 </html>

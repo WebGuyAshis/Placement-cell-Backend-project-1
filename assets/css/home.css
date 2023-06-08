@@ -2,17 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 body{
     font-family: 'Poppins', sans-serif; 
-}
-/* Homepage */
+  }
+  /* Homepage */
 .homepage{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-}
-/* navbar */
+  }
+  /* navbar */
 .navbar{
     position: fixed;
     top: 0;
@@ -23,41 +23,41 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-/* logo design */
+  }
+  /* logo design */
 .logo{
     color: rgb(224, 224, 224);
     margin-left: 50px;
     font-size: 30px;
     font-family: 'Cherry Bomb One';
-}
+  }
 .logo-first{
     color: orangered;
-}
-
-/* nav list items */
+  }
+  
+  /* nav list items */
 .nav-list{
     display: flex;
     margin-right: 10px;
-}
-
+  }
+  
 .nav-list-items{
     margin: 0 10px;
     list-style: none;
     font-size: 18px;
-}
+  }
 .nav-list-items:hover{
     cursor: pointer;
     color: orangered;
     font-weight: 900;
-}
-/* Homepage */
+  }
+  /* Homepage */
 .homepage{
     height: 100vh;
     width: 100vw;
     
-}
-/* Welcome Text */
+  }
+  /* Welcome Text */
 .welcome-text{
     position: absolute;
     width: 100vw;
@@ -68,69 +68,79 @@ body{
     display: flex;
     flex-direction: column;
     /* background-color: aliceblue; */
-}
-.greet-msg{
+  }
+  .greet-msg {
     font-size: 90px;
     color: rgb(229, 229, 229);
-}
-.site-name{
-    font-family: 'Cherry Bomb One', cursive;
-}
-
-.quote{
-    color: rgb(221, 221, 221, 0.8);
+  }
+  .site-name {
+    font-family: "Cherry Bomb One", cursive;
+  }
+  
+  .quote {
+    color: rgb(221, 221, 221);
     font-size: 20px;
-}
-/* Authorization */
-.authorization{
+  }
+  /* Authorization */
+  .authorization {
     display: flex;
     width: 350px;
     margin: auto;
     justify-content: space-around;
     font-size: 15px;
     font-weight: 600;
-}
-.sign-in{
+  }
+  .sign-in {
     padding: 8px 10px;
     color: white;
     border-radius: 6px;
     border: 1px solid white;
     transition: 0.2s;
     text-decoration: none;
-}
-.sign-in:hover{
-        color: orangered;
-        background-color: rgb(255, 255, 255);
-        transition: 0.2s;
-        cursor: pointer;
-}
-.sign-up{
+  }
+  .sign-in:hover {
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .sign-up {
     padding: 8px 10px;
     background-color: rgb(241, 255, 250);
     border-radius: 6px;
     text-decoration: none;
     color: rgb(45, 45, 45);
-}
+  }
 .sign-up:hover{
     color: rgb(255, 255, 255);
-    background-color: rgb(75, 31, 31);
+    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.2s;
     cursor: pointer;
-}
-/* Background Image */
+  }
+  /* Background Image */
 .home-background{
     height: 100%;
-    width: 100%;  
-    overflow: hidden;  
-    background: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent);
-}
+    width: 100%;
+    overflow: hidden;
+    background: rgb(0, 0, 0, 0.45);
+  }
 .home-background::before{
     content: '';
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: url('../images/bg-1.jpeg');
+    background-image: url('../images/bg-1.jpg');
     background-size: cover;
     z-index: -1;
-}
+  }
+  

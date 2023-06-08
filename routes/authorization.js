@@ -4,6 +4,6 @@ const authorizationController = require('../controllers/authorizationController'
 
 
 router.get('/', authorizationController.home);
-router.post('/createEmployee', authorizationController.createEmployee);
+// router.post('/createEmployee', authorizationController.createEmployee);
 
 module.exports = router;
