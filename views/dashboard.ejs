@@ -49,7 +49,9 @@
             <div class="employee-navbar">
                 <div class="employee">
                     <img src="/assets/images/anime-boy.jpeg" alt="">
-                    <span class="employee-name">Ashis Yadav</span>
+                    <span class="employee-name">
+                        <%= name %>
+                    </span>
                     <span class="employee-designation">SDE-I</span>
                     <span class="employee-company">@Coding Ninjas</span>
                 </div>
@@ -90,10 +92,10 @@
                     </li>
                 </ul>
 
-                <div class="log-out">
+                <a href="/employee/sign-out" class="log-out">
                     <img src="/assets/images/icons/logout.png" alt="" class="log-out-icon">
                     Log out
-                </div>
+                </a>
             </div>
 
 
@@ -101,7 +103,9 @@
                 <!-- Greet To Employee -->
                 <div class="greet-employee">
                     Good Evening,
-                    <p>Ashis</p>
+                    <p>
+                        <%= name %>
+                    </p>
                 </div>
 
                 <div class="tasks-card">

@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
+const passport = require('passport');
 
 const Employee = require('../models/employee')
 
 module.exports.home = (req,res)=>{
+    if(req.isAuthenticated()){
+        return res.redirect('/')
+    }
     res.render('authorization',{
         title: 'Authorization'
     })
@@ -17,7 +21,7 @@ module.exports.createEmployee = (req,res)=>{
     })
     .then((newEmployee)=>{
         console.log('Successfully Created Account', newEmployee);
-        res.redirect('/');
+        res.redirect('/authorization');
     })
     .catch((err)=>{
         console.log("Error creating Account!!", err);

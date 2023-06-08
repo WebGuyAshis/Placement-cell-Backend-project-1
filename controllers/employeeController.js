@@ -24,3 +24,14 @@ module.exports.createSession = (req,res)=>{
     console.log("Logged in Successfully");
     return res.redirect('/employee/dashboard')
 }
+
+module.exports.destroySession = (req,res)=>{
+    req.logout((err)=>{
+        if(err){
+            console.log("Error in Log Out!");
+            return;
+        }
+        console.log('Successfully logged out!');
+        return res.redirect('/');
+    })
+}

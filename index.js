@@ -10,6 +10,7 @@ const MongoStore = require('connect-mongo'); // pass session as an argument here
 // Using Passport js
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const GoogleStrategy = require('./config/passport-google');
 
 const assetsPath = path.join(__dirname, 'assets');
 app.use('/assets', express.static(assetsPath));

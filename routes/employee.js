@@ -13,5 +13,11 @@ router.post('/create-session',passport.authenticate('local',
 
 router.use('/dashboard', require('./dashboard'));
 
+router.get('/sign-out', employeeController.destroySession)
+
+
+router.get('/auth/google', passport.authenticate('google', {scope:['profile', 'email']}));
+
+router.get('/auth/google/callback', passport.authenticate('google', {failureRedirect: '/authorization'}), employeeController.createSession)
 
 module.exports = router;

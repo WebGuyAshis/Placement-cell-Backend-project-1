@@ -46,8 +46,13 @@
             </span>
 
             <div class="authorization">
-                    <a class="sign-in" href="/authorization">Sign In</a>
-                    <a class="sign-up" href="/authorization">Create Your Account</a>
+                    <% if(!user) { %> 
+                        <a class="sign-in" href="/authorization">Sign In</a>
+                        <a class="sign-up" href="/authorization">Create Your Account</a>
+                    <% } else {%>
+                        <a class="sign-up" href="/employee/dashboard">Go to Dashboard</a>
+                        <% } %>
+
             </div>
         </div>
         <div class="home-background">
