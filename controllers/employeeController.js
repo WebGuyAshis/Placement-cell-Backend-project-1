@@ -35,3 +35,10 @@ module.exports.destroySession = (req,res)=>{
         return res.redirect('/');
     })
 }
+
+module.exports.studentsPage= (req,res)=>{
+    res.render('student',{
+        title: 'Students Page',
+        name: req.user.EmployeeName,
+    })
+}

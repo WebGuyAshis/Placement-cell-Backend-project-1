@@ -2,7 +2,6 @@ const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const crypto = require("crypto");
 const Employee = require("../models/employee");
-const { errorMonitor } = require("stream");
 
 passport.use(
   new GoogleStrategy(
@@ -11,7 +10,7 @@ passport.use(
         "196204033409-sik1f3liggtqelcnh2ladmrr43ljrque.apps.googleusercontent.com",
       clientSecret: "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",
       callbackURL: "http://localhost:8080/new/auth/google/callback",
-      scope: ['profile', 'email']
+      scope: ['profile', 'email'],
     },
     function (accessToken, refreshToken, profile, done) {
       Employee.findOne({ email: profile.emails[0].value })

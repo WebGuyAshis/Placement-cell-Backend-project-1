@@ -15,6 +15,8 @@ router.use('/dashboard', require('./dashboard'));
 
 router.get('/sign-out', employeeController.destroySession)
 
+router.get('/students-page', employeeController.studentsPage)
+
 
 router.get('/auth/google', passport.authenticate('google', {scope:['profile', 'email']}));
 
