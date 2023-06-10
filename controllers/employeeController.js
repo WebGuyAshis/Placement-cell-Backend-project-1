@@ -42,3 +42,9 @@ module.exports.studentsPage= (req,res)=>{
         name: req.user.EmployeeName,
     })
 }
+module.exports.companyPage= (req,res)=>{
+    res.render('company',{
+        title: 'Students Page',
+        name: req.user.EmployeeName,
+    })
+}
