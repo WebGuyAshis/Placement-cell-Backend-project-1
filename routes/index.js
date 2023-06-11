@@ -6,8 +6,10 @@ const homeController = require('../controllers/homeController')
 
 router.get('/', homeController.home)
 // router.get('/dashboard',dashboardController.home )
-router.use('/employee', require('./employee'))
-router.use('/new', passport.checkAuthentication, require('./employee'))
+router.use('/employee', require('./employee'));
+
+router.use('/new', require('./employee'));
+
 router.use('/authorization', require('./authorization'))
 
 module.exports = router;

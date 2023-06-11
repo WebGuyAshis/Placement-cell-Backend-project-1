@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.error-container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/assets/images/404.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.error-details{
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #171717;
+}
+.error-heading{
+    font-size: 200px;
+    color: rgb(193, 193, 193);
+    text-shadow: 0 13.36px 8.896px #363636,0 -2px 1px #ffffff;
+
+}
+.error-msg{
+    font-size: 50px;
+    text-shadow: 0 13.36px 8.896px #363636,0 -2px 1px #ffffff;
+
+}
+.error-quote{
+    font-size: 20px;
+    text-shadow: 0 13.36px 8.896px #7a7a7a,0 -2px 1px #fff;
+
+}
+.error-home{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}

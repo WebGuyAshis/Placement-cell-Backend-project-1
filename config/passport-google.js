@@ -7,8 +7,8 @@ passport.use(
   new GoogleStrategy(
     {
       clientID:
-        "196204033409-sik1f3liggtqelcnh2ladmrr43ljrque.apps.googleusercontent.com",
-      clientSecret: "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",
+        "754168346850-iob065kiqoupms72fed9g0v1udil7qqi.apps.googleusercontent.com",
+      clientSecret: "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",
       callbackURL: "http://localhost:8080/new/auth/google/callback",
       scope: ['profile', 'email'],
     },

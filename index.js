@@ -43,7 +43,12 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
 // Routes
+
+
 app.use('/', require('./routes'));
+app.use((req,res)=>{
+    res.status(404).render('404');
+})
 
 app.listen(8080, (err)=>{
     if(err){

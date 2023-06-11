@@ -168,6 +168,7 @@ body{
     position: relative;
     cursor: pointer;
     border: 1px solid rgb(120, 120, 120);
+    text-decoration: none;
 }
 .box:hover{
     transform: scale(1.1);
