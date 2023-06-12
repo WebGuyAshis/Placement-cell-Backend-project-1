@@ -18,7 +18,9 @@ router.get('/sign-out', employeeController.destroySession)
 router.get('/students-page', employeeController.studentsPage)
 router.post('/students-page/create-student', employeeController.createStudent)
 
+
 router.get('/companies-page', employeeController.companyPage);
+router.post('/companies-page/create-company', employeeController.createCompany)
 
 
 router.get('/auth/google', passport.authenticate('google', {scope:['profile', 'email']}));
