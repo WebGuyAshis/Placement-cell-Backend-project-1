@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -94,57 +95,97 @@
                 </div>
 
                 <ul class="students-box">
-                    <li class="student-container">
-                        <div class="student-background-pic">
+                    <% for(let student of students) {%>
+                        <li class="student-container">
                             <div class="student-pic">
-                                <img src="/assets/images/anime-boy.jpeg" alt="">
+                                <img src="" alt="">
                             </div>
-                        </div>
-                        <div class="student-short-detail">
-                            <div class="scores">
-                                <div class="dsa-score score">
-                                    <p>DSA</p>
-                                    <p class="detail">24</p>
-                                </div>
-                
-                                <div class="wbdv-score score">
-                                    <p>WB-DV</p>
-                                    <p class="detail">24</p>
-                                </div>
-                
-                                <div class="React-score score">
-                                    <p>REACT</p>
-                                    <p class="detail">24</p>
-                                </div>
-                
+                    
+                            <div class="student-details">
+                                <h3 class="student-name">
+                                    <%= student.name %>
+                                </h3>
+                                <p class="student-age">Age: <%= student.age %></p>
+                                <p class="student-batch">Batch: <%= student.batch %></p>
                             </div>
-                
-                            <div class="student-mini-detail">
-                                <h3>Ashis Yadav</h3>
-                                <p>Gender:
-                                    <span class="student-gender detail">Male</span>
-                                </p>
-                                <p>Age: 
-                                    <span class="student-age detail">
-                                        23
-                                    </span>
-                                </p>
-                                <p>Batch: 
-                                    <span class="student-batch detail">
-                                        2020
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="see-student-details">
-                                See Details
-                            </div>
-                        </div>
-                    </li>
+                            
+                        </li>
+                        <% } %>
 
                     
                 </ul>
             </div>
         </div>
     </div>
+
+    <div class="student-form-container">
+        <h1>Create Student Form</h1>
+  
+        <form
+          action="/employee/students-page/create-student"
+          method="post"
+          class="student-form"
+        >
+  
+        <i class="bi bi-x-lg"></i>
+          <h3>Personal Details</h3>
+          <div class="form-data">
+            <label for="name" class="form-label">Name: </label>
+            <input type="text" name="name" placeholder="Joe Biden" />
+          </div>
+          <div class="form-data">
+              <label for="name" class="form-label">Gender: </label>
+              <input type="radio" id="male" name="gender" value="male" class="">
+              <label for="male" class="small-label">Male</label>
+              
+              <input type="radio" id="female" name="gender" value="female" class="">
+              <label for="female" class="small-label">Female</label>
+          </div>
+          <div class="form-data">
+              <label for="dob" class="form-label">Date of Birth:</label>
+              <input type="date" name="dob">
+  
+            <label for="age" class="small-label">Age: </label>
+            <input type="number" name="age" placeholder="99" max="50" min="15"/>
+          </div>
+          <h3>Academic Details</h3>
+          <div class="form-data">
+            <label for="college" class="form-label">College: </label>
+            <input type="text" name="college" placeholder="IIT" />
+          </div>
+          <div class="form-data">
+            <label for="batch" class="form-label">Batch: </label>
+            <input type="number" name="batch" placeholder="2020" />
+          </div>
+          <div class="form-data">
+            <label for="dsa-score" class="form-label">DSA-Score: </label>
+            <input
+              type="number"
+              name="dsaScore"
+              placeholder="Score out of 100"
+            />
+          </div>
+          <div class="form-data">
+            <label for="webD-score" class="form-label">WebD-Score: </label>
+            <input
+              type="number"
+              name="webDScore"
+              placeholder="Score out of 100"
+            />
+          </div>
+          <div class="form-data">
+            <label for="reactScore" class="form-label">React-Score: </label>
+            <input
+              type="number"
+              name="reactScore"
+              placeholder="Score out of 100"
+            />
+          </div>
+  
+          <button type="submit" class="create-student-btn">Create Student</button>
+        </form>
+      </div>
+
+      <script src="/assets/js/student.js"></script>
 </body>
 </html>

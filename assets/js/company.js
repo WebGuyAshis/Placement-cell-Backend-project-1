@@ -21,6 +21,12 @@ function studentUpdateBox(e) {
   if(fetchClass == 'bi bi-x-lg'){
     closeComapanyDetail();
   }
+  if(fetchClass == 'add-company'){
+    openAddCompany();
+  }
+  if(fetchClass == 'bi bi-x'){
+    closeAddCompany();
+  }
 
   console.log("Class:", fetchClass);
   console.log("Id:", fetchId)
@@ -50,3 +56,17 @@ const closeLi = () =>{
     eachList.style.height = "50px"
 }
 
+const addCompany = document.querySelector('.add-company-container');
+
+const openAddCompany=()=>{
+    addCompany.style.display = 'flex';
+    document.body.appendChild(blurContainer);
+    blurContainer.classList.add('blur');
+}
+
+const closeAddCompany=()=>{
+  addCompany.style.display = 'none';
+  document.body.removeChild(blurContainer);
+  blurContainer.classList.remove('blur');
+
+}

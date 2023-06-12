@@ -7,7 +7,7 @@ const employeeSchema = new mongoose.Schema({
     },
     Email:{
         type: String,
-        required: true
+        required: true,
     },
     Password:{
         type: String,
