@@ -6,6 +6,7 @@ const passport = require('passport')
 const employeeController = require('../controllers/employeeController');
 const studentController = require('../controllers/studentController');
 const companyController = require('../controllers/companyController');
+const interviewController = require('../controllers/interviewController')
 
 
 router.post('/createEmployee', employeeController.createEmployee);
@@ -23,9 +24,12 @@ router.post('/students-page/create-student', studentController.createStudent)
 
 router.get('/companies-page', companyController.companyPage);
 router.post('/companies-page/create-company', companyController.createCompany)
-router.post('/companies-page/createInterview', companyController.createInterview)
+// router.post('/companies-page/createInterview', companyController.createInterview)
 
-router.get('/interviews-page', companyController.interviewPage)
+router.get('/interviews-page', interviewController.interviewPage)
+
+router.post('/interviews-page/createInterview', interviewController.createInterview)
+
 
 
 

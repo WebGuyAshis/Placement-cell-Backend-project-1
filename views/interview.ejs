@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
         <%= title%>
     </title>
 </head>
+
 <body>
     <div class="student-page-container">
 
@@ -47,43 +48,50 @@
                     <span class="employee-designation">SDE-I</span>
                     <span class="employee-company">@Coding Ninjas</span>
                 </div>
-    
+
                 <ul class="nav">
                     <li class="nav-items">
-                       <a href="/employee/dashboard">
-                        <img src="/assets/images/icons/dashboard.png" alt="" class="nav-icon">
-                         Dashboard
-                       </a>
+                        <a href="/employee/dashboard">
+                            <img src="/assets/images/icons/dashboard.png" alt="" class="nav-icon">
+                            Dashboard
+                        </a>
                     </li>
                     <li class="nav-items">
                         <a href="/employee/students-page">
                             <img src="/assets/images/icons/graduates.png" alt="" class="nav-icon">
-                        Students
+                            Students
                         </a>
                     </li>
                     <li class="nav-items">
                         <a href="/employee/companies-page">
                             <img src="/assets/images/icons/buildings.png" alt="" class="nav-icon">
-    
-                        Companies
+
+                            Companies
+                        </a>
+                    </li>
+                    <li class="nav-items">
+                        <a href="/employee/interviews-page">
+                            <img src="/assets/images/icons/cogwheel.png" alt="" class="nav-icon">
+
+                            Interview
                         </a>
                     </li>
                     <li class="nav-items">
                         <a href="/employee/mails">
                             <img src="/assets/images/icons/mail.png" alt="" class="nav-icon">
-    
-                        Messages
+
+                            Messages
                         </a>
                     </li>
                     <li class="nav-items">
                         <a href="/employee/settings">
                             <img src="/assets/images/icons/cogwheel.png" alt="" class="nav-icon">
-    
-                        Settings
+
+                            Settings
                         </a>
                     </li>
                 </ul>
-    
+
                 <a href="/employee/sign-out" class="log-out">
                     <img src="/assets/images/icons/logout.png" alt="" class="log-out-icon">
                     Log out
@@ -95,7 +103,7 @@
                     Add Interview
                 </div>
                 <div class="interview-list-box">
-                    <table >
+                    <table>
                         <thead class="interview-list-head">
                             <tr>
                                 <th>Sl.No</th>
@@ -107,23 +115,86 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>
-    
+
                         <tbody>
-                            <tr>
-                                <td>Sl.No</td>
-                                <td>Student Name</td>
-                                <td>Company Name</td>
-                                <td>Interview Date</td>
-                                <td>Status</td>
-                                <td>Update</td>
-                                <td>Delete</td>
-                            </tr>
-                            
+                            <% for(let index=0;index < interviews.length; index++) {%>
+                                <% let sl = index + 1 %>
+                                <tr>
+                                    <td><%= sl %>.</td>
+                                    <td>
+                                        <%= interviews[index].studentName %>
+                                    </td>
+                                    <td>
+                                        <%= interviews[index].companyName %>
+                                    </td>
+                                    <td>
+                                        <%= interviews[index].interviewDate %>
+                                    </td>
+                                    <td>
+                                        <%= interviews[index].status %>
+                                    </td>
+                                    <td><button data-id="">Update</button></td>
+                                    <td><button data-id="">Delete</button></td>
+                                </tr>
+                                <% } %>
+
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+
+
+        <div class="create-interview">
+            <form action="/employee/interviews-page/createInterview" method="post" class="create-interview-form">
+                <i class="bi bi-x close-interview"></i>
+                <h3>Assign Interview</h3>
+                <div class="interview-form-data">
+                    <label for="student">Student Name: </label>
+                    <select name="student">
+                        <% for (let student of students) { %>
+                            <option value="<%=student._id %>,<%= student.name %> ">
+                                <%= student.name %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+
+                <div class="interview-form-data">
+                    <label for="company">Company Name: </label>
+                    <select name="company">
+                        <% for (let company of companies) { %>
+                            <option value="<%=company._id %>,<%= company.name %>">
+                                <%= company.name %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+
+                <div class="interview-form-data">
+                    <label for="interviewDate">Interview Date:</label>
+                    <input type="date" name="interviewDate">
+                </div>
+
+
+                <div class="interview-form-data">
+                    <label for="status">Status:</label>
+                    <select name="status">
+                        <option value="To be decided">To be decided</option>
+                        <option value="On Hold">On Hold</option>
+                        <option value="Passed">Passed</option>
+                        <option value="Failed">Failed</option>
+                        <option value="Not Attended">Not Attended</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="assign">Assign Interview</button>
+
+            </form>
+        </div>
     </div>
+
+    <script src="/assets/js/interview.js"></script>
 </body>
+
 </html>

@@ -37,9 +37,9 @@ module.exports.destroySession = (req, res) => {
 };
 
 
-module.exports.interviewPage = (req,res)=.{
-  res.render('interviews',{
+module.exports.interviewPage = (req,res)=>{
+  res.render("interview", {
     title: "Students Page",
-        name: req.user.EmployeeName,
-  })
+    name: req.user.EmployeeName,
+  });
 }

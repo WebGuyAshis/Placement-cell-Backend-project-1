@@ -1,6 +1,5 @@
 const interviewBox = document.querySelector(".create-interview");
 const addCompany = document.querySelector(".add-company-container");
-console.log("Script msfsdnk");
 const eachList = document.querySelector(".each-student");
 const companyDialogueBox = document.querySelector(".company-details-container");
 
@@ -32,12 +31,12 @@ function studentUpdateBox(e) {
     closeAddCompany();
   }
 
-  if (fetchClass == "assign-interview") {
-    openCreateInterview(fetchId);
-  }
-  if (fetchClass == "bi bi-x close-interview") {
-    closeCreateInterview();
-  }
+  // if (fetchClass == "assign-interview") {
+  //   openCreateInterview(fetchId);
+  // }
+  // if (fetchClass == "bi bi-x close-interview") {
+  //   closeCreateInterview();
+  // }
 
   console.log("Class:", fetchClass);
   console.log("Id:", fetchId);
@@ -81,12 +80,12 @@ const closeAddCompany = () => {
 };
 
 
-const openCreateInterview = (id) => {
-  document.querySelector('.company-interviewId').value = id;
-  interviewBox.style.display = "block";
-};
+// const openCreateInterview = (id) => {
+//   document.querySelector('.company-interviewId').value = id;
+//   interviewBox.style.display = "block";
+// };
 
-const closeCreateInterview = () => {
-  console.log("Close Box");
-  interviewBox.style.display = "none";
-};
+// const closeCreateInterview = () => {
+//   console.log("Close Box");
+//   interviewBox.style.display = "none";
+// };

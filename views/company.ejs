@@ -67,6 +67,13 @@
             </a>
           </li>
           <li class="nav-items">
+            <a href="/employee/interviews-page">
+                <img src="/assets/images/icons/cogwheel.png" alt="" class="nav-icon">
+
+            Interview
+            </a>
+        </li>
+          <li class="nav-items">
             <a href="">
               <img src="/assets/images/icons/mail.png" alt="" class="nav-icon" />
 
@@ -151,54 +158,6 @@
         </div>
 
         <button class="add-company-btn" type="submit">Add Company</button>
-      </form>
-    </div>
-
-    <div class="create-interview">
-      <form action="/employee/companies-page/createInterview" method="post" class="create-interview-form">
-      <i class="bi bi-x close-interview"></i>
-        <h3>Assign Interview</h3>
-        <div class="interview-form-data">
-          <label for="student">Student Name: </label>
-          <select name="student">
-            <% for (let student of students) { %>
-              <option value=<%= student._id %>>
-                <%= student.name %>
-              </option>
-              <% } %>
-          </select>
-        </div>
-
-        <div class="interview-form-data">
-          <label for="interviewDate">Interview Date:</label>
-          <input type="date" name="interviewDate">
-        </div>
-
-        <div class="interview-form-data">
-          <label for="interviewSlot">Interview Slot:</label>
-          <select name="interviewSlot">
-            <option value="10 AM">10 AM</option>
-            <option value="10 AM">2 PM</option>
-            <option value="10 AM">6 PM</option>
-          </select>
-        </div>
-
-        <div class="interview-form-data">
-          <label for="status">Status:</label>
-          <select name="status">
-            <option value="To be decided">To be decided</option>
-            <option value="On Hold">On Hold</option>
-            <option value="Passed">Passed</option>
-            <option value="Failed">Failed</option>
-            <option value="Not Attended">Not Attended</option>
-          </select>
-        </div>
-        <div class="interview-form-data">
-            <input type="hidden" name="companyId" class="company-interviewId" type="text" value="" >
-        </div>
-
-        <button type="submit" class="assign">Assign Interview</button>
-
       </form>
     </div>
   </div>

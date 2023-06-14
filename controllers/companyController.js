@@ -2,20 +2,8 @@ const mongoose = require('mongoose');
 const Company = require("../models/company");
 const Student = require('../models/student');
 
-const Result = require("../models/results")
+const Result = require("../models/interview")
 
-// module.exports.companyPage = (req, res) => {
-//     Company.find().then((companies) => {
-//         Student.find().then((students)=>{
-//             res.render("company", {
-//               title: "Students Page",
-//               name: req.user.EmployeeName,
-//               companies,
-//               students
-//             });
-//         })
-//     });
-//   };
   module.exports.companyPage = async(req, res) => {
     const [companies, students] = await Promise.all([
         Company.find(),
