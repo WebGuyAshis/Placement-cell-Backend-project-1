@@ -36,6 +36,9 @@ const studentSchema = new mongoose.Schema({
     reactScore:{
         type:Number,
         required: true
+    }, 
+    interviewList:{
+        type:String
     }
 },
 {

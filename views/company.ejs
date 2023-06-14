@@ -1,203 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="/assets/css/company.css" />
-    <title><%= title%></title>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet" />
 
-  <body>
-    <div class="student-page-container">
-      <div class="topbar">
-        <div class="logo"><span class="logo-first">C</span>AREERLAND</div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/assets/css/company.css" />
+  <title>
+    <%= title%>
+  </title>
+</head>
 
-        <div class="employee-part">
-          <!-- Notification -->
-          <img
-            src="/assets/images/icons/bell.png"
-            alt=""
-            class="top-bar-icons"
-          />
-          <!-- Calendar -->
-          <img
-            src="/assets/images/icons/calendar.png"
-            alt=""
-            class="top-bar-icons"
-          />
-          <!-- Employee Pic/ Name on Hover -->
-          <img
-            src="/assets/images/icons/graduates.png"
-            alt=""
-            class="top-bar-icons"
-          />
+<body>
+  <div class="student-page-container">
+    <div class="topbar">
+      <div class="logo"><span class="logo-first">C</span>AREERLAND</div>
+
+      <div class="employee-part">
+        <!-- Notification -->
+        <img src="/assets/images/icons/bell.png" alt="" class="top-bar-icons" />
+        <!-- Calendar -->
+        <img src="/assets/images/icons/calendar.png" alt="" class="top-bar-icons" />
+        <!-- Employee Pic/ Name on Hover -->
+        <img src="/assets/images/icons/graduates.png" alt="" class="top-bar-icons" />
+      </div>
+    </div>
+
+    <div class="add-student-container">
+      <div class="employee-navbar">
+        <div class="employee">
+          <img src="/assets/images/anime-boy.jpeg" alt="" />
+          <span class="employee-name">
+            <%= name %>
+          </span>
+          <span class="employee-designation">SDE-I</span>
+          <span class="employee-company">@Coding Ninjas</span>
         </div>
+
+        <ul class="nav">
+          <li class="nav-items">
+            <a href="/employee/dashboard">
+              <img src="/assets/images/icons/dashboard.png" alt="" class="nav-icon" />
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-items">
+            <a href="/employee/students-page">
+              <img src="/assets/images/icons/graduates.png" alt="" class="nav-icon" />
+              Students
+            </a>
+          </li>
+          <li class="nav-items">
+            <a href="/employee/companies-page">
+              <img src="/assets/images/icons/buildings.png" alt="" class="nav-icon" />
+
+              Companies
+            </a>
+          </li>
+          <li class="nav-items">
+            <a href="">
+              <img src="/assets/images/icons/mail.png" alt="" class="nav-icon" />
+
+              Messages
+            </a>
+          </li>
+          <li class="nav-items">
+            <a href="">
+              <img src="/assets/images/icons/cogwheel.png" alt="" class="nav-icon" />
+
+              Settings
+            </a>
+          </li>
+        </ul>
+
+        <a href="/employee/sign-out" class="log-out">
+          <img src="/assets/images/icons/logout.png" alt="" class="log-out-icon" />
+          Log out
+        </a>
       </div>
 
-      <div class="add-student-container">
-        <div class="employee-navbar">
-          <div class="employee">
-            <img src="/assets/images/anime-boy.jpeg" alt="" />
-            <span class="employee-name"> <%= name %> </span>
-            <span class="employee-designation">SDE-I</span>
-            <span class="employee-company">@Coding Ninjas</span>
-          </div>
+      <div class="students-list-container">
+        <div class="add-company">Add Company</div>
 
-          <ul class="nav">
-            <li class="nav-items">
-              <a href="/employee/dashboard">
-                <img
-                  src="/assets/images/icons/dashboard.png"
-                  alt=""
-                  class="nav-icon"
-                />
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="/employee/students-page">
-                <img
-                  src="/assets/images/icons/graduates.png"
-                  alt=""
-                  class="nav-icon"
-                />
-                Students
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="/employee/companies-page">
-                <img
-                  src="/assets/images/icons/buildings.png"
-                  alt=""
-                  class="nav-icon"
-                />
-
-                Companies
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="">
-                <img
-                  src="/assets/images/icons/mail.png"
-                  alt=""
-                  class="nav-icon"
-                />
-
-                Messages
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="">
-                <img
-                  src="/assets/images/icons/cogwheel.png"
-                  alt=""
-                  class="nav-icon"
-                />
-
-                Settings
-              </a>
-            </li>
-          </ul>
-
-          <a href="/employee/sign-out" class="log-out">
-            <img
-              src="/assets/images/icons/logout.png"
-              alt=""
-              class="log-out-icon"
-            />
-            Log out
-          </a>
-        </div>
-
-        <div class="students-list-container">
-          <div class="add-company">Add Company</div>
-
-          <ul class="company-box">
-            <% for(let company of companies) { %>
+        <ul class="company-box">
+          <% for(let company of companies) { %>
             <li class="company-container">
-              <h2 class="company-name"><%= company.name %></h2>
+              <h2 class="company-name">
+                <%= company.name %>
+              </h2>
               <p class="interview-date">
                 Listed on: <%= company.addedtime %>
               </p>
-              <p class="company-desc"><%= company.description %></p>
+              <p class="company-desc">
+                <%= company.description %>
+              </p>
 
-              <span class="more-company-detail"
-                >More Details
+              <span id= <%= company._id %> class="more-company-detail">More Details
                 <i class="bi bi-arrow-right"></i>
               </span>
             </li>
-            <% } %>
-          </ul>
-        </div>
-
-        <div class="company-details-container">
-          <i class="bi bi-x-lg"></i>
-
-          <h2 class="company-details-name">Capgemini</h2>
-          <ol class="students-list">
-            <li class="each-student">
-              <div class="student-li">
-                <div class="student-name">
-                  <span class="indexing">01.</span>
-                  <h4>Ashis</h4>
-                </div>
-                <span class="status"> On Hold </span>
-                <div class="edit-icons">
-                  <i class="bi bi-pencil-square"></i>
-                  <i class="bi bi-trash3"></i>
-                </div>
-              </div>
-            </li>
-          </ol>
-
-          <div class="assign-interview">Assign Interview</div>
-        </div>
+          <% } %>
+        </ul>
       </div>
 
-      <div class="add-company-container">
-        <i class="bi bi-x"></i>
-        <h3>Add Company</h3>
-        <form
-          action="/employee/companies-page/create-company"
-          class="add-company-form"
-          method="post"
-        >
-          <div class="form-data">
-            <label for="name">Company Name:</label>
-            <input type="text" name="name" />
-          </div>
+      <div class="company-details-container">
+        <i class="bi bi-x-lg"></i>
 
-          <div class="form-data">
-            <label for="description">Company Description: </label>
-            <textarea name="description" cols="30" rows="5"></textarea>
-          </div>
+        <h2 class="company-details-name">Capgemini</h2>
+        <ol class="students-list">
+          <li class="each-student">
+            <div class="student-li">
+              <div class="student-name">
+                <span class="indexing">01.</span>
+                <h4>Ashis</h4>
+              </div>
+              <span class="status"> On Hold </span>
+              <div class="edit-icons">
+                <i class="bi bi-pencil-square"></i>
+                <i class="bi bi-trash3"></i>
+              </div>
+            </div>
+          </li>
+        </ol>
 
-          <button class="add-company-btn" type="submit">Add Company</button>
-        </form>
+        <div class="assign-interview">Assign Interview</div>
       </div>
     </div>
-    <script src="/assets/js/company.js"></script>
-  </body>
+
+    <div class="add-company-container">
+      <i class="bi bi-x"></i>
+      <h3>Add Company</h3>
+      <form action="/employee/companies-page/create-company" class="add-company-form" method="post">
+        <div class="form-data">
+          <label for="name">Company Name:</label>
+          <input type="text" name="name" />
+        </div>
+
+        <div class="form-data">
+          <label for="description">Company Description: </label>
+          <textarea name="description" cols="30" rows="5"></textarea>
+        </div>
+
+        <button class="add-company-btn" type="submit">Add Company</button>
+      </form>
+    </div>
+
+    <div class="create-interview">
+      <form action="/employee/companies-page/createInterview" method="post" class="create-interview-form">
+      <i class="bi bi-x close-interview"></i>
+        <h3>Assign Interview</h3>
+        <div class="interview-form-data">
+          <label for="student">Student Name: </label>
+          <select name="student">
+            <% for (let student of students) { %>
+              <option value=<%= student._id %>>
+                <%= student.name %>
+              </option>
+              <% } %>
+          </select>
+        </div>
+
+        <div class="interview-form-data">
+          <label for="interviewDate">Interview Date:</label>
+          <input type="date" name="interviewDate">
+        </div>
+
+        <div class="interview-form-data">
+          <label for="interviewSlot">Interview Slot:</label>
+          <select name="interviewSlot">
+            <option value="10 AM">10 AM</option>
+            <option value="10 AM">2 PM</option>
+            <option value="10 AM">6 PM</option>
+          </select>
+        </div>
+
+        <div class="interview-form-data">
+          <label for="status">Status:</label>
+          <select name="status">
+            <option value="To be decided">To be decided</option>
+            <option value="On Hold">On Hold</option>
+            <option value="Passed">Passed</option>
+            <option value="Failed">Failed</option>
+            <option value="Not Attended">Not Attended</option>
+          </select>
+        </div>
+        <div class="interview-form-data">
+            <input type="hidden" name="companyId" class="company-interviewId" type="text" value="" >
+        </div>
+
+        <button type="submit" class="assign">Assign Interview</button>
+
+      </form>
+    </div>
+  </div>
+  <script src="/assets/js/company.js"></script>
+</body>
+
 </html>

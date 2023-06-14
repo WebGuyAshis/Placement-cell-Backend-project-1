@@ -1,407 +1,448 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-}
-
-.student-page-container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background-image: url('/assets/images/studentsback\ \(2\).jpg');
-    background-size: cover;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.topbar{
-    height: 7vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    font-family: 'Cherry Bomb One';
-    font-size: 5vh;
-    margin-left: 10px;
-    color: rgb(207, 207, 207);
-}
-.logo-first{
-    color: orangered;
+.student-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/assets/images/studentsback\ \(2\).jpg");
+  background-size: cover;
+  background-color: azure;
 }
 
-.employee-part{
-    margin-right: 10px;
-    display: flex;
-    justify-content: space-around;
-    width: 140px;
+.topbar {
+  height: 7vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.top-bar-icons{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    padding: 3px;
-    background-color: aliceblue;
-    cursor: pointer;
+.logo {
+  font-family: "Cherry Bomb One";
+  font-size: 5vh;
+  margin-left: 10px;
+  color: rgb(207, 207, 207);
 }
-.top-bar-icons:hover{
-    background-color: rgb(248, 100, 142);
+.logo-first {
+  color: orangered;
 }
 
-.add-student-container{
-    display: flex;
-    height: 100%;
-    width: 100%;
+.employee-part {
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 140px;
 }
-.employee-navbar{
-    width: 15%;
-    padding-top: 10px;
-    min-width: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.5);
+.top-bar-icons {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: aliceblue;
+  cursor: pointer;
 }
-.employee{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.top-bar-icons:hover {
+  background-color: rgb(248, 100, 142);
 }
-.employee > img{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+
+.add-student-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
-.employee-name{
-    color: rgb(223, 223, 223);
-    font-size: 18px;
+.employee-navbar {
+  width: 15%;
+  padding-top: 10px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.employee-designation{
-    color: rgb(168, 168, 168);
-    font-size: 10px;
+.employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.employee-company{
-    color: rgb(0, 149, 255);
-    font-size: 12px;
+.employee > img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.employee-name {
+  color: rgb(223, 223, 223);
+  font-size: 18px;
+}
+.employee-designation {
+  color: rgb(168, 168, 168);
+  font-size: 10px;
+}
+.employee-company {
+  color: rgb(0, 149, 255);
+  font-size: 12px;
 }
 
 /* .nav{
 } */
 
-.nav-items{
-    list-style: none;
-    border-radius: 8px ;
-    overflow: hidden;
-    height: 35px;
+.nav-items {
+  list-style: none;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 35px;
 }
-.nav-items  a{
-    display: block;
-    height: 100%;
-    width: 100%;
- text-decoration: none;
- display: flex;
- align-items: center;
- padding: 0 10px;
- transition: 0.3s;
- color: rgb(204, 204, 205);
+.nav-items a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  transition: 0.3s;
+  color: rgb(204, 204, 205);
 }
-.nav-icon{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    margin-right: 8px;
+.nav-icon {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
 }
-.nav-items  a:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgb(86, 190, 255);
- transition: 0.3s;
-    
-}
-
-
-.log-out{
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    color: rgb(173, 173, 173);
+.nav-items a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(86, 190, 255);
+  transition: 0.3s;
 }
 
-.log-out-icon{
-    height: 25px;
+.log-out {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  color: rgb(173, 173, 173);
 }
 
-.log-out:hover{
-    color: rgb(0, 187, 255);
+.log-out-icon {
+  height: 25px;
 }
 
-.students-list-container{
-    /* background-color: rgb(36, 36, 36); */
-    backdrop-filter: blur(5px);
-    flex: 1;
-    color: aliceblue;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-::-webkit-scrollbar{
-    display: none;
+.log-out:hover {
+  color: rgb(0, 187, 255);
 }
 
-.add-company{
-    width: 150px;
-    height: 40px;
-    background-color: rgb(0, 174, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    cursor: pointer;
+.students-list-container {
+  /* background-color: rgb(36, 36, 36); */
+  backdrop-filter: blur(5px);
+  flex: 1;
+  color: aliceblue;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
-.add-student:hover{
-    background-color: rgb(0, 119, 255);
-}
-.company-box{
-    flex: 1;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.company-container{
-    height: 150px;
-    width: 300px;
-    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(91, 5, 71));
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    transition: 0.3s;
-    color: aliceblue;
-    padding: 8px;
-}
-.company-container:hover{
-    transform: scale(1.03);
-    transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-.bi-x-lg{
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    /* font-size: 20px; */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: aliceblue;
-    cursor: pointer;
-}
-.bi-x-lg:hover{
-    transition: 0.2s;
-    background-color: rgb(218, 218, 218);
-    color: red;
-}
-.company-name{
-color: rgb(255, 0, 106);
-}
-.interview-date{
-    font-size: 12px;
-    color: rgb(173, 173, 173);
-}
-.company-desc{
-    font-size: 15px;
-}
-.more-company-detail{
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    color: rgb(158, 158, 158);
-    cursor: pointer;
-}
-.more-company-detail:hover{
-    font-weight: 600;
-    color: rgb(255, 0, 106);
+::-webkit-scrollbar {
+  display: none;
 }
 
-
+.add-company {
+  width: 150px;
+  height: 40px;
+  background-color: rgb(0, 174, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-student:hover {
+  background-color: rgb(0, 119, 255);
+}
+.company-box {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-content: start;
+}
+.company-container {
+  height: 150px;
+  width: 300px;
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(91, 5, 71));
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  color: aliceblue;
+  padding: 8px;
+}
+.company-container:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.bi-x-lg {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  /* font-size: 20px; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  cursor: pointer;
+}
+.bi-x-lg:hover {
+  transition: 0.2s;
+  background-color: rgb(218, 218, 218);
+  color: red;
+}
+.company-name {
+  color: rgb(255, 0, 106);
+}
+.interview-date {
+  font-size: 12px;
+  color: rgb(173, 173, 173);
+}
+.company-desc {
+  font-size: 15px;
+}
+.more-company-detail {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: rgb(158, 158, 158);
+  cursor: pointer;
+}
+.more-company-detail:hover {
+  font-weight: 600;
+  color: rgb(255, 0, 106);
+}
 
 /* Company Details */
-.company-details-container{
-    min-height: 50vh;
-    /* height: 80vh; */max-height: 80vh;
-    width: 80vw;
-    background-color: rgba(54, 54, 54, 0.5);
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    z-index: 2;
-    display: none;
-    padding-bottom:10px ;
+.company-details-container {
+  min-height: 50vh;
+  /* height: 80vh; */
+  max-height: 80vh;
+  width: 80vw;
+  background-color: rgba(54, 54, 54, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  display: none;
+  padding-bottom: 10px;
 }
-.indexing{
-    font-size: 15px;
-    margin-right: 20px;
+.indexing {
+  font-size: 15px;
+  margin-right: 20px;
 }
-.student-name{
-    display: flex;
-    align-items: center;
-    width: 50%;
+.student-name {
+  display: flex;
+  align-items: center;
+  width: 50%;
 }
-.student-name > h4{
-    margin-left: 10px;
+.student-name > h4 {
+  margin-left: 10px;
 }
-.company-details-name{
-    font-size: 30px;
-    height: 10%;
-    color: rgb(164, 164, 164);
+.company-details-name {
+  font-size: 30px;
+  height: 10%;
+  color: rgb(164, 164, 164);
 }
-.students-list{
-    list-style: none;
-    height: 80%;
-    overflow-y: scroll;
-    width: 90%;
-    padding: 0 10px;
+.students-list {
+  list-style: none;
+  height: 80%;
+  overflow-y: scroll;
+  width: 90%;
+  padding: 0 10px;
 }
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
-.each-student{
-    margin-bottom: 8px;
-    height: 50px;
-    transition: 0.2s;
-    cursor: pointer; 
-    border-radius: 10px;
-    background-color: rgb(196, 196, 196);
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
+.each-student {
+  margin-bottom: 8px;
+  height: 50px;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(196, 196, 196);
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
-.student-li{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;}
-.each-student:hover{
-    transform: scale(1.03);
-    transition: 0.2s;
-    background-color: rgb(231, 231, 231);
+.student-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.edit-icons{
-    width: 60px;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
+.each-student:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+  background-color: rgb(231, 231, 231);
 }
-.bi-pencil-square:hover{
-    color: rgb(0, 153, 255);
+.edit-icons {
+  width: 60px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-
-.bi-trash3:hover{
-    color: red;
+.bi-pencil-square:hover {
+  color: rgb(0, 153, 255);
 }
 
-
-.assign-interview{
-    padding: 5px;
-    font-weight: 600;
-    background-color: rgb(0, 132, 255);
-    border-radius: 5px;
-    transition: 0.3s;
-    cursor: pointer;
-    color: rgb(227, 227, 227);
+.bi-trash3:hover {
+  color: red;
 }
-.assign-interview:hover{
-    transform: scale(1.03);
-    transition: 0.3s;
-    color: rgb(255, 255, 255);
+
+.assign-interview {
+  padding: 5px;
+  font-weight: 600;
+  background-color: rgb(0, 132, 255);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  color: rgb(227, 227, 227);
+}
+.assign-interview:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
 }
 
 #blur-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    transition: 0.5s;
-    z-index: 1;
-  }
-  
-  #blur-container.blur {
-    pointer-events: auto;
-    backdrop-filter: blur(5px);
-    transition: 0.5s;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 1;
+}
 
-  .add-company-container{
+#blur-container.blur {
+  pointer-events: auto;
+  backdrop-filter: blur(5px);
+  transition: 0.5s;
+}
+
+.add-company-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background-color: rgba(30, 0, 43, 0.6);
+  border: 1px solid rgb(255, 47, 116, 0.7);
+  border-radius: 10px;
+  color: rgb(214, 214, 214);
+  z-index: 2;
+  padding: 10px;
+}
+.add-company-btn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #59b1ff;
+  color: aliceblue;
+  outline: none;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+.form-data {
+  margin: 10px;
+}
+.form-data > input {
+  background-color: rgb(227, 227, 227);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+.bi-x {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+/* assign Interview */
+.create-interview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(66, 66, 66, 0.9);
+  color: rgb(216, 216, 216);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 3;
+
+  display: none;
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+.create-interview-form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    background-color: rgba(30, 0, 43, 0.6);
-    border: 1px solid rgb(255, 47, 116, 0.7);
-    border-radius: 10px;
-    color: rgb(214, 214, 214);
-    z-index: 2;
-    padding: 10px;
-  }
-  .add-company-btn{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #59b1ff;
-    color: aliceblue;
-    outline: none;
+}
+.interview-form-data {
+  display: flex;
+  text-align: start;
+  margin: 10px;
+  width: 100%;
+}
+
+.interview-form-data > label {
+  width: 120px;
+}
+
+.create-interview-form > button{
+    padding: 8px;
+    border-radius: 7px;
     border: none;
-    margin: 10px;
-    cursor: pointer;
-  }
-  .form-data{
-    margin: 10px;
-  }
-  .form-data > input{
-    background-color: rgb(227, 227, 227);
     outline: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 5px 10px;
-  }
-  textarea{
-    width: 100%;
-    resize: none;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    padding: 10px;
-  }
-  .bi-x{
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
-  }
+}
+

@@ -3,7 +3,9 @@ const router = express.Router();
 
 const passport = require('passport')
 
-const employeeController = require('../controllers/employeeController')
+const employeeController = require('../controllers/employeeController');
+const studentController = require('../controllers/studentController');
+const companyController = require('../controllers/companyController');
 
 
 router.post('/createEmployee', employeeController.createEmployee);
@@ -15,12 +17,17 @@ router.use('/dashboard', require('./dashboard'));
 
 router.get('/sign-out', employeeController.destroySession)
 
-router.get('/students-page', employeeController.studentsPage)
-router.post('/students-page/create-student', employeeController.createStudent)
+router.get('/students-page', studentController.studentsPage)
+router.post('/students-page/create-student', studentController.createStudent)
 
 
-router.get('/companies-page', employeeController.companyPage);
-router.post('/companies-page/create-company', employeeController.createCompany)
+router.get('/companies-page', companyController.companyPage);
+router.post('/companies-page/create-company', companyController.createCompany)
+router.post('/companies-page/createInterview', companyController.createInterview)
+
+router.get('/interviews-page', companyController.interviewPage)
+
+
 
 
 router.get('/auth/google', passport.authenticate('google', {scope:['profile', 'email']}));

@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 
 const Employee = require("../models/employee");
-const Student = require("../models/student");
-
-const Company = require("../models/company");
 
 module.exports.createEmployee = (req, res) => {
   // console.log("Req.Body:", req.body);
@@ -39,56 +36,10 @@ module.exports.destroySession = (req, res) => {
   });
 };
 
-module.exports.studentsPage = (req, res) => {
-  Student.find().then((students) => {
-    res.render("student", {
-      title: "Students Page",
-      name: req.user.EmployeeName,
-      students,
-    });
-  });
-};
-module.exports.companyPage = (req, res) => {
-  Company.find().then((companies) => {
-    res.render("company", {
-      title: "Students Page",
-      name: req.user.EmployeeName,
-      companies
-    });
-  });
-};
-module.exports.createStudent = (req, res) => {
-  Student.create({
-    name: req.body.name,
-    gender: req.body.gender,
-    dob: req.body.dob,
-    age: req.body.age,
-    college: req.body.college,
-    batch: req.body.batch,
-    dsaScore: req.body.dsaScore,
-    webDScore: req.body.webDScore,
-    reactScore: req.body.reactScore,
-  })
-    .then((createdStudent) => {
-      console.log("Student Created Successfully!", createdStudent);
-      res.redirect("/employee/students-page");
-    })
-    .catch((err) => {
-      console.log("Error Creating Student!", err);
-    });
-};
 
-module.exports.createCompany = (req, res) => {
-  Company.create({
-    name: req.body.name,
-    description: req.body.description,
+module.exports.interviewPage = (req,res)=.{
+  res.render('interviews',{
+    title: "Students Page",
+        name: req.user.EmployeeName,
   })
-    .then((createdCompany) => {
-      console.log("Successfully Created Company!", createdCompany);
-      res.redirect('/employee/companies-page')
-    })
-    .catch((err) => {
-      console.log("Error Creating Company!", err);
-      res.redirect('/employee/companies-page')
-    });
-};
+}
