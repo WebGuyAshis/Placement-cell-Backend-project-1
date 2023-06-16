@@ -1,31 +1,30 @@
 const mongoose = require("mongoose");
 
-const Result = require('../models/interview');
+const Interview = require('../models/interview');
 const Student = require("../models/student");
 const Company = require("../models/company");
 
 
-module.exports.studentsPage = (req, res) => {
-  Student.find()
-  .then((students) => {
-    for(let student of students){
-      Result.find({ studentId: student._id })
-        .then((results)=>{
-          student.interviewList = results;
-          student.save();
-        })
-        .catch((error)=>{
-          console.error(error);
-        })
+module.exports.studentsPage = async (req, res) => {
+  try {
+    const students = await Student.find();
+    for (let student of students) {
+      const interviews = await Interview.find({ studentId: student._id });
+      // console.log(student);
+      student.interviewList = interviews.map((interview) => interview.toObject());
+      await student.save();
     }
 
     res.render("student", {
-      title: "Students Page",
+      title: "Student Page",
       name: req.user.EmployeeName,
       students,
     });
-  });
+  } catch (error) {
+    console.error(error);
+  }
 };
+
 
 module.exports.createStudent = (req, res) => {
   Student.create({

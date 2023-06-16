@@ -13,6 +13,10 @@ const companySchema = new mongoose.Schema(
       addedtime: {
         type: String,
       },
+      interviewList: [{
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Interview'
+      }],
     },
     {
       timestamps: true,

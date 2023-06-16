@@ -206,6 +206,9 @@ tbody td{
     border-right: 1px solid grey; 
     text-align: center;
 }
+tbody tr:hover{
+    background-color: rgb(56, 56, 56);
+}
 
 /* assign Interview */
 .create-interview {

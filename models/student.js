@@ -37,9 +37,10 @@ const studentSchema = new mongoose.Schema({
         type:Number,
         required: true
     }, 
-    interviewList:{
-        type:String
-    }
+    interviewList: [{
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Interview'
+      }],
 },
 {
     timestamps: true

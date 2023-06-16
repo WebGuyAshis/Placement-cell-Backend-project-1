@@ -32,7 +32,7 @@ module.exports.createInterview = (req, res) => {
   const dateString = interviewDate;
   const date = moment(dateString);
   const formattedDate = date.format('Do MMMM YYYY');
-
+  
   Interview.create({
     studentId: studentId,
     studentName: studentName,

@@ -24,6 +24,7 @@ router.post('/students-page/create-student', studentController.createStudent)
 
 router.get('/companies-page', companyController.companyPage);
 router.post('/companies-page/create-company', companyController.createCompany)
+router.get('/companies-page/:companyId',companyController.showDetail);
 // router.post('/companies-page/createInterview', companyController.createInterview)
 
 router.get('/interviews-page', interviewController.interviewPage)
