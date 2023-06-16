@@ -20,6 +20,8 @@ router.get('/sign-out', employeeController.destroySession)
 
 router.get('/students-page', studentController.studentsPage)
 router.post('/students-page/create-student', studentController.createStudent)
+router.get('/students-page/:studentId',studentController.showDetail);
+
 
 
 router.get('/companies-page', companyController.companyPage);

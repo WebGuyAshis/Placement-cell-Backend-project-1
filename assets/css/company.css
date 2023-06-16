@@ -256,10 +256,6 @@ body {
   display: none;
   padding-bottom: 10px;
 }
-.indexing {
-  font-size: 15px;
-  margin-right: 20px;
-}
 .student-name {
   display: flex;
   align-items: center;

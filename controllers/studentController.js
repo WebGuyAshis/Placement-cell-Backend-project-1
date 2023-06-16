@@ -46,3 +46,15 @@ module.exports.createStudent = (req, res) => {
       console.log("Error Creating Student!", err);
     });
 };
+
+module.exports.showDetail = (req,res)=>{
+  const studentId = req.params.studentId.slice(1);
+  Student.findById(studentId)
+    .then(student=>{
+      res.json(student);
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).json({ error: 'An error occurred while fetching student details' });
+    });
+}

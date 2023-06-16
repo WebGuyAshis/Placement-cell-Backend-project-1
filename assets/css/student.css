@@ -192,7 +192,17 @@ body{
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
-
+    position: relative;
+}
+.bi-arrow-right-circle-fill{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 25px;
+}
+.bi-arrow-right-circle-fill:hover{
+    color: rgb(58, 156, 255);
 }
 .student-container:hover{
     transform: scale(1.02);
@@ -240,6 +250,7 @@ body{
     overflow-y: scroll;
     z-index: 2;
 }
+
 ::-webkit-scrollbar{
     display: none;
 }
@@ -302,6 +313,8 @@ body{
     right: 10px;
     /* color: aquamarine; */
     cursor: pointer;
+    color: rgb(217, 217, 217);
+    z-index: 1;
 }
 .bi-x-lg:hover{
     color: red;
@@ -323,3 +336,120 @@ body{
     backdrop-filter: blur(5px);
     transition: 0.5s;
   }
+
+  .student-details-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(94, 94, 94, 0.8);
+    height: 90%;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center;
+    gap: 10px; */
+    overflow-y: scroll;
+    display: none;
+    z-index: 2;
+    background: linear-gradient(45deg, rgb(48, 48, 48),rgba(0, 0, 0, 0.8));
+    border: 1px solid rgb(77, 10, 42);
+    color: aliceblue;
+  }
+
+  .profile-pic{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(234, 245, 255, 0.5);
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .profile-pic img{
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 75px ;
+        /* position: absolute;
+        top: 50%; */
+  }
+  .selected-student-name{
+    margin-top: 75px;
+    text-align: center;
+    color: white;
+  }
+
+  .info-box{
+    background-color: rgba(183, 183, 183, 0.6);
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid rgb(77, 10, 56);
+
+  }
+  .info-box h3{
+text-align: center;
+text-decoration: underline;
+    color: rgb(210, 233, 255);
+}
+
+.info-box strong{
+    display: inline-block;
+    width: 150px;
+}
+
+  .interviews-info table{
+    border-collapse: collapse;
+    width: 100%; 
+    color: white; 
+  }
+  .interview-list-head{
+    width: 100%;
+    background-color: rgb(26, 30, 30);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 45px ;
+    border: 1px solid rgb(166, 166, 166);
+}
+.interview-list-head th{
+border-right: 1px solid rgb(156, 156, 156);
+}
+
+tbody tr{
+    background-color: rgb(85, 85, 85);
+    height: 40px;
+}
+tbody td{
+    border-right: 1px solid grey; 
+    text-align: center;
+}
+tbody tr:hover{
+    background-color: rgb(56, 56, 56);
+}
+
+.delete-student{
+    display: block;
+    width: 150px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(255, 60, 60);
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close-detail{
+    position: fixed;
+    color: rgb(255, 49, 49);
+    top: 10px;
+    right: 10px;
+}
