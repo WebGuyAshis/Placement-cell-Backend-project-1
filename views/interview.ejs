@@ -133,8 +133,8 @@
                                     <td>
                                         <%= interviews[index].status %>
                                     </td>
-                                    <td><button data-id="">Update</button></td>
-                                    <td><button data-id="">Delete</button></td>
+                                    <td><button class="update-interview-btn" id="<%= interviews[index]._id%>">Update</button></td>
+                                    <td><a href="/employee/interviews-page/delete-interview/<%= interviews[index]._id%>">Delete</a></td>
                                 </tr>
                                 <% } %>
 
@@ -179,7 +179,7 @@
 
                 <div class="interview-form-data">
                     <label for="status">Status:</label>
-                    <select name="status">
+                    <select name="status" id="status">
                         <option value="To be decided">To be decided</option>
                         <option value="On Hold">On Hold</option>
                         <option value="Passed">Passed</option>
@@ -191,6 +191,10 @@
                 <button type="submit" class="assign">Assign Interview</button>
 
             </form>
+        </div>
+
+        <div class="update-interview">
+            
         </div>
     </div>
 

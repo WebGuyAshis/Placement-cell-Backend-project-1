@@ -8,9 +8,9 @@ const studentBatch = document.querySelector('.student-batch-detail');
 const studentDsaScore = document.querySelector('.student-dsaScore-detail');
 const studentWebDScore = document.querySelector('.student-webDScore-detail');
 const studentReactScore = document.querySelector('.student-reactScore-detail');
+const studentDetail = document.querySelector('.student-details-container');
 
 const blurContainer = document.createElement('div');
-const studentDetail = document.querySelector('.student-details-container');
 blurContainer.id = 'blur-container';
 console.log("Student Scripts Loaded");
 document.addEventListener('click', studentUpdateBox);
@@ -88,6 +88,13 @@ let studentId = e.target.id;
         `;
         tableBody.append(tr);
       });
+      let a = document.createElement('a');
+      a.setAttribute('class', 'delete-student');
+      a.setAttribute('href', `/employee/students-page/delete-student/${student._id}`)
+
+      a.innerText = 'Delete Button';
+
+      studentDetail.append(a);
   })
 
   studentDetail.style.display = 'block';

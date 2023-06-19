@@ -58,3 +58,18 @@ module.exports.showDetail = (req,res)=>{
       res.status(500).json({ error: 'An error occurred while fetching student details' });
     });
 }
+
+
+module.exports.deleteStudent = (req,res) =>{
+  const studentId = req.params.studentId;
+
+  Student.findByIdAndRemove(studentId)
+    .then((deleteStudent)=>{
+      console.log("Successfully Deleted Student!", deleteStudent);
+      res.redirect('/employee/students-page');
+    })
+    .catch((err)=>{
+      console.log("Error Deleting Student!!",err);
+      res.redirect('back');
+    })
+}
