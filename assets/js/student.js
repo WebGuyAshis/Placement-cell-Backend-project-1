@@ -60,8 +60,6 @@ let studentId = e.target.id;
   .then(res=>{return res.json()})
   .then(student =>{
 
-
-
       studentName.textContent = student.name;
       studentGender.textContent = student.gender;
       studentDob.textContent = student.dob;
@@ -72,7 +70,7 @@ let studentId = e.target.id;
       studentWebDScore.textContent = student.webDScore;
       studentReactScore.textContent = student.reactScore;
 
-
+      tableBody.innerHTML = ``;
       student.interviewList.forEach(interviewDetail => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -88,14 +86,10 @@ let studentId = e.target.id;
         `;
         tableBody.append(tr);
       });
-      let a = document.createElement('a');
-      a.setAttribute('class', 'delete-student');
-      a.setAttribute('href', `/employee/students-page/delete-student/${student._id}`)
 
-      a.innerText = 'Delete Button';
-
-      studentDetail.append(a);
-  })
+      const deleteStudent = document.querySelector('.delete-student');
+      deleteStudent.setAttribute('href', `/employee/students-page/delete-student/${student._id}`)
+    })
 
   studentDetail.style.display = 'block';
   document.body.appendChild(blurContainer);

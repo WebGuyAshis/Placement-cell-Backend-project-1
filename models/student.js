@@ -38,7 +38,8 @@ const studentSchema = new mongoose.Schema({
         required: true
     }, 
     interviewList: [{
-        type: mongoose.Schema.Types.Mixed,
+        // type: mongoose.Schema.Types.Mixed,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Interview'
       }],
 },

@@ -9,9 +9,11 @@ module.exports.companyPage = async (req, res) => {
 
     for (let company of companies) {
       const interviews = await Interview.find({ companyId: company._id });
-      company.interviewList = interviews.map((interview) => interview.toObject());
+      company.interviewList = interviews.map((interview) => interview._id);
       await company.save();
     }
+
+    await Company.populate(companies, {path: 'interviewList'})
 
     res.render("company", {
       title: "Company Page",
@@ -52,23 +54,3 @@ module.exports.createCompany = (req, res) => {
       res.redirect("/employee/companies-page");
     });
 };
-
-// module.exports.createInterview = (req,res)=>{
-//   console.log('inside controller');
-//   console.log(req.body);
-//   Result.create({
-//     companyId: req.body.companyId,
-//     student: req.body. student,
-//     interviewDate: req.body.interviewDate,
-//     interviewSlot: req.body.interviewSlot,
-//     status: req.body.status
-//   })
-//   .then((createdInterview)=>{
-//       console.log("Successfully Alloted Interview", createdInterview);
-//       res.redirect('back');
-//   })
-//   .catch((err)=>{
-//       console.log("Error Alotting Interview to Student!", err);
-
-//   })
-// }

@@ -14,7 +14,8 @@ const companySchema = new mongoose.Schema(
         type: String,
       },
       interviewList: [{
-        type: mongoose.Schema.Types.Mixed,
+        // type: mongoose.Schema.Types.Mixed,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Interview'
       }],
     },
