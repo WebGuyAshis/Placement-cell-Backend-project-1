@@ -3,14 +3,14 @@ const mongoose = require('mongoose');
 const interviewSchema = new mongoose.Schema({
     studentId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'student'
+        ref: 'Student'
     },
     studentName:{
         type:String,
     },
     companyId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'company'
+        ref: 'Company'
     },
     companyName:{
         type:String

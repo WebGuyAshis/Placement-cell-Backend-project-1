@@ -12,8 +12,6 @@ module.exports.studentsPage = async (req, res) => {
       student.interviewList = interviews.map((interview) => interview._id);
       await student.save();
     }
-
-    await Student.populate(students, { path: 'interviewList' });
     
     res.render("student", {
       title: "Student Page",
@@ -52,7 +50,7 @@ module.exports.createStudent = (req, res) => {
 
 module.exports.showDetail = (req,res)=>{
   const studentId = req.params.studentId.slice(1);
-  Student.findById(studentId)
+  Student.findById(studentId).populate("interviewList")
     .then(student=>{
       res.json(student);
     })

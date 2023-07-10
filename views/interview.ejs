@@ -150,8 +150,8 @@
                 <i class="bi bi-x close-interview"></i>
                 <h3>Assign Interview</h3>
                 <div class="interview-form-data">
-                    <label for="student">Student Name: </label>
-                    <select name="student">
+                    <label for="studentLabel">Student Name: </label>
+                    <select id="studentLabel" name="student">
                         <% for (let student of students) { %>
                             <option value="<%=student._id %>,<%= student.name %> ">
                                 <%= student.name %>
@@ -161,8 +161,8 @@
                 </div>
 
                 <div class="interview-form-data">
-                    <label for="company">Company Name: </label>
-                    <select name="company">
+                    <label for="companyLabel">Company Name: </label>
+                    <select name="company" id="companyLabel">
                         <% for (let company of companies) { %>
                             <option value="<%=company._id %>,<%= company.name %>">
                                 <%= company.name %>

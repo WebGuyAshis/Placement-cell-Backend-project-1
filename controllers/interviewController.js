@@ -84,15 +84,33 @@ module.exports.updateInterview = (req, res) => {
     });
 };
 
-module.exports.deleteInterview = (req,res)=>{
-  const interviewId = req.params.interviewId
-  Interview.findByIdAndDelete(interviewId)
-    .then((deletedInterview)=>{
-      console.log("Successfully Deleted Interview!", deletedInterview);
-      res.redirect('/employee/interviews-page')
-    })
-    .catch(err=>{
-      console.log("Error Deleting Interview!",err);
-      res.redirect('/employee/interviews-page')
-    })
-}
+module.exports.deleteInterview = async (req, res) => {
+  try {
+    const interviewId = req.params.interviewId;
+
+    const deletedInterview = await Interview.findByIdAndDelete(interviewId);
+    console.log("Successfully Deleted Interview!", deletedInterview);
+    res.redirect('/employee/interviews-page');
+
+    const studentId = deletedInterview.studentId;
+    const companyId = deletedInterview.companyId;
+
+    const student = await Student.findById(studentId);
+    if (student) {
+      console.log("Successfully deleted Interview from Students");
+      student.interviewList = student.interviewList.filter(interview => interview.toString() !== interviewId);
+      await student.save();
+    }
+
+    const company = await Company.findById(companyId);
+    if (company) {
+      console.log("Successfully deleted Interview from Companies");
+      company.interviewList = company.interviewList.filter(interview => interview.toString() !== interviewId);
+      await company.save();
+    }
+  } catch (err) {
+    console.log("Error Deleting Interview!", err);
+    res.redirect('/employee/interviews-page');
+  }
+};
+

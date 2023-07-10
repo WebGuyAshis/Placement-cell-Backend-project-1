@@ -71,6 +71,7 @@ let studentId = e.target.id;
       studentReactScore.textContent = student.reactScore;
 
       tableBody.innerHTML = ``;
+      console.log("Student:", student);
       student.interviewList.forEach(interviewDetail => {
         const tr = document.createElement('tr');
         tr.innerHTML = `

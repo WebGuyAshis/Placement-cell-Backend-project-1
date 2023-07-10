@@ -29,7 +29,7 @@ module.exports.showDetail =  (req, res) => {
   console.log("Show Detail!");
   const companyId = req.params.companyId.slice(1);
   console.log("company Id",companyId);
-  Company.findById(companyId)
+  Company.findById(companyId).populate('interviewList')
     .then(company=>{
       console.log("Company Ajax", company);
       res.json(company);
