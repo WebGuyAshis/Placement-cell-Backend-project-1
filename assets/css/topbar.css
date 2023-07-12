@@ -1,0 +1,16 @@
+.topbar{
+    height: 7vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-family: 'Cherry Bomb One';
+    font-size: 5vh;
+    margin-left: 10px;
+    color: rgb(207, 207, 207);
+}
+.logo-first{
+    color: orangered;
+}

@@ -65,8 +65,8 @@ module.exports.deleteStudent = (req,res) =>{
   const studentId = req.params.studentId;
 
   Student.findByIdAndRemove(studentId)
-    .then((deleteStudent)=>{
-      console.log("Successfully Deleted Student!", deleteStudent);
+    .then((deletedStudent)=>{
+      console.log("Successfully Deleted Student!", deletedStudent);
       res.redirect('/employee/students-page');
     })
     .catch((err)=>{

@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <!-- TopBAr CSS -->
+    <link rel="stylesheet" href="/assets/css/topbar.css">
+    <!-- Sidebar CSS -->
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
     <title>
         <%= title%>
     </title>
@@ -21,114 +25,42 @@
 
 <body>
     <div class="student-page-container">
+        <%- include('_topNavbar') %>
 
-        <div class="topbar">
-            <div class="logo">
-                <span class="logo-first">C</span>AREERLAND
+            <div class="add-student-container">
+                <%- include('_sideNavbar') %>
+
+                    <div class="students-list-container">
+                        <div class="add-student">
+                            Add a Student
+                        </div>
+
+                        <ul class="students-box">
+
+                            <% for(let student of students) {%>
+                                <li class="student-container">
+                                    <i class="bi bi-arrow-right-circle-fill" id="<%= student._id %>"></i>
+                                    <div class="student-pic">
+                                        <img src="/assets/images/anime-boy.jpeg" alt="">
+                                    </div>
+
+                                    <div class="student-details">
+                                        <h3 class="student-name">
+                                            <%= student.name %>
+                                        </h3>
+                                        <p class="student-age">Age: <%= student.age %>
+                                        </p>
+                                        <p class="student-batch">Batch: <%= student.batch %>
+                                        </p>
+                                    </div>
+
+                                </li>
+                                <% } %>
+
+
+                        </ul>
+                    </div>
             </div>
-
-            <div class="employee-part">
-                <!-- Notification -->
-                <img src="/assets/images/icons/bell.png" alt="" class="top-bar-icons ">
-                <!-- Calendar -->
-                <img src="/assets/images/icons/calendar.png" alt="" class="top-bar-icons ">
-                <!-- Employee Pic/ Name on Hover -->
-                <img src="/assets/images/icons/graduates.png" alt="" class="top-bar-icons ">
-
-            </div>
-        </div>
-
-        <div class="add-student-container">
-            <div class="employee-navbar">
-                <div class="employee">
-                    <img src="/assets/images/anime-boy.jpeg" alt="">
-                    <span class="employee-name">
-                        <%= name %>
-                    </span>
-                    <span class="employee-designation">SDE-I</span>
-                    <span class="employee-company">@Coding Ninjas</span>
-                </div>
-
-                <ul class="nav">
-                    <li class="nav-items">
-                        <a href="/employee/dashboard">
-                            <img src="/assets/images/icons/dashboard.png" alt="" class="nav-icon">
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-items">
-                        <a href="/employee/students-page">
-                            <img src="/assets/images/icons/graduates.png" alt="" class="nav-icon">
-                            Students
-                        </a>
-                    </li>
-                    <li class="nav-items">
-                        <a href="/employee/companies-page">
-                            <img src="/assets/images/icons/buildings.png" alt="" class="nav-icon">
-
-                            Companies
-                        </a>
-                    </li>
-                    <li class="nav-items">
-                        <a href="/employee/interviews-page">
-                            <img src="/assets/images/icons/cogwheel.png" alt="" class="nav-icon">
-
-                            Interview
-                        </a>
-                    </li>
-                    <li class="nav-items">
-                        <a href="/employee/mails">
-                            <img src="/assets/images/icons/mail.png" alt="" class="nav-icon">
-
-                            Messages
-                        </a>
-                    </li>
-                    <li class="nav-items">
-                        <a href="/employee/settings">
-                            <img src="/assets/images/icons/cogwheel.png" alt="" class="nav-icon">
-
-                            Settings
-                        </a>
-                    </li>
-                </ul>
-
-                <a href="/employee/sign-out" class="log-out">
-                    <img src="/assets/images/icons/logout.png" alt="" class="log-out-icon">
-                    Log out
-                </a>
-            </div>
-
-            <div class="students-list-container">
-                <div class="add-student">
-                    Add a Student
-                </div>
-
-                <ul class="students-box">
-
-                    <% for(let student of students) {%>
-                        <li class="student-container">
-                            <i class="bi bi-arrow-right-circle-fill" id="<%= student._id %>"></i>
-                            <div class="student-pic">
-                                <img src="/assets/images/anime-boy.jpeg" alt="">
-                            </div>
-
-                            <div class="student-details">
-                                <h3 class="student-name">
-                                    <%= student.name %>
-                                </h3>
-                                <p class="student-age">Age: <%= student.age %>
-                                </p>
-                                <p class="student-batch">Batch: <%= student.batch %>
-                                </p>
-                            </div>
-
-                        </li>
-                        <% } %>
-
-
-                </ul>
-            </div>
-        </div>
     </div>
 
     <div class="student-form-container">
