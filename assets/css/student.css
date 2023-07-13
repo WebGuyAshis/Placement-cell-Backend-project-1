@@ -24,7 +24,6 @@ body{
 }
 
 .students-list-container{
-    /* background-color: rgb(36, 36, 36); */
     backdrop-filter: blur(5px);
     flex: 1;
     color: aliceblue;
@@ -53,14 +52,11 @@ body{
     background-color: rgb(0, 119, 255);
 }
 .students-box{
-    /* background-color: aqua; */
-    /* height: 100%; */
     flex: 1;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     align-content: start;
-    /* overflow-y: scroll; */
 }
 .student-container{
     height: 80px;
@@ -91,7 +87,6 @@ body{
 }
 .student-pic{
     width: 70px;
-    /* background-color: rgb(201, 201, 201); */
     border-radius: 5px;
     overflow: hidden;
 }
@@ -114,8 +109,6 @@ body{
 /* Form */
 
 .student-form-container{
-    /* height: 80vh; */
-    /* width: 80vh; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -191,7 +184,6 @@ body{
     position: absolute;
     top: 10px;
     right: 10px;
-    /* color: aquamarine; */
     cursor: pointer;
     color: rgb(217, 217, 217);
     z-index: 1;
@@ -228,10 +220,6 @@ body{
     width: 90%;
     border-radius: 10px;
     overflow: hidden;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center;
-    gap: 10px; */
     overflow-y: scroll;
     display: none;
     z-index: 2;
@@ -256,8 +244,6 @@ body{
         object-fit: cover;
         border-radius: 50%;
         margin-top: 75px ;
-        /* position: absolute;
-        top: 50%; */
   }
   .selected-student-name{
     margin-top: 75px;
