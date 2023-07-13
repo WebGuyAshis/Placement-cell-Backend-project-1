@@ -65,8 +65,8 @@
                                     <td>
                                         <%= interviews[index].status %>
                                     </td>
-                                    <td><button class="update-interview-btn" id="<%= interviews[index]._id%>">Update</button></td>
-                                    <td><a href="/employee/interviews-page/delete-interview/<%= interviews[index]._id%>">Delete</a></td>
+                                    <td><span class="update-interview-btn" id="<%= interviews[index]._id%>">Update</span></td>
+                                    <td><a class="delete-interview" href="/employee/interviews-page/delete-interview/<%= interviews[index]._id%>">Delete</a></td>
                                 </tr>
                                 <% } %>
 
@@ -131,6 +131,8 @@
     </div>
 
     <script src="/assets/js/interview.js"></script>
+    <script src="/assets/js/_sidebar.js"></script>
+
 </body>
 
 </html>

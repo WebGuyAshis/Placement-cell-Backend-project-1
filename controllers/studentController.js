@@ -67,6 +67,16 @@ module.exports.deleteStudent = (req,res) =>{
   Student.findByIdAndRemove(studentId)
     .then((deletedStudent)=>{
       console.log("Successfully Deleted Student!", deletedStudent);
+      
+      deletedStudent.interviewList.forEach(interviewId=>{
+        Interview.findByIdAndDelete(interviewId)
+        .then(deletedInterview=>{
+          console.log("and Interview related to", deletedStudent.name);
+        })
+        .catch(err=>{
+          console.log("Error deleting",err);
+        })
+      })
       res.redirect('/employee/students-page');
     })
     .catch((err)=>{

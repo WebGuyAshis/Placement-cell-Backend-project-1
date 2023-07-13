@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
-mongoose.connect(`mongodb://127.0.0.1:27017/Placement-Cell`);
+// mongoose.connect(`mongodb://127.0.0.1:27017/Placement-Cell`);
+mongoose.connect(process.env.mongooseUrl);
 
 const db = mongoose.connection;
 

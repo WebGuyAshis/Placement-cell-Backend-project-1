@@ -15,12 +15,26 @@ body {
   background-image: url("/assets/images/studentsback\ \(2\).jpg");
   background-size: cover;
   background-color: azure;
+  overflow: hidden;
 }
 
 .add-companies-container{
   display: flex;
-  height: 100%;
+  height: calc(100% - 7vh);
   width: 100%;
+}
+.add-company {
+  width: 150px;
+  min-height: 40px;
+  background-color: rgb(0, 174, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-company:hover {
+  background-color: rgb(0, 119, 255);
 }
 .companies-list-container {
   /* background-color: rgb(36, 36, 36); */
@@ -38,19 +52,6 @@ body {
   display: none;
 }
 
-.add-company {
-  width: 150px;
-  height: 40px;
-  background-color: rgb(0, 174, 255);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.add-company:hover {
-  background-color: rgb(0, 119, 255);
-}
 .company-box {
   flex: 1;
   display: flex;

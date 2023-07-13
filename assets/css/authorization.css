@@ -50,40 +50,6 @@ body{
     color: orangered;
 }
 
-/* Language */
-
-.language{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    height: 35px;
-    border-radius: 30px;
-    overflow: hidden;
-    background-color: rgb(255, 251, 251);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    cursor: pointer;
-    transition: 0.7s;
-}
-.language:hover{
-    height: 70px;
-    transition: 0.7s;
-    border-radius: 10px;
-}
-.lang-btn{
-    width: 70px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.lang-btn:hover{
-    background-color: rgb(230, 230, 230);
-}
-.lang-btn > img{
-    height: 20px;
-    margin-right: 5px;
-}
-
 
 /* login-page-text */
 .login-page-text{
@@ -198,4 +164,22 @@ button[type="submit"] {
     background-size: cover;
     background-position: center;
     transition: 1s;
+}
+
+@media screen and (max-width:700px) {
+    .authorize-container{
+        width: 90%;
+        justify-content: center;
+    }
+    .login-page-text{
+        font-size: 40px;
+    }
+    .logo-authorization-page{
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 40px;
+    }
+    .authorize-img{
+        display: none;
+    }
 }

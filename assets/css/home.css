@@ -13,58 +13,19 @@ body{
     overflow: hidden;
   }
   /* navbar */
-.navbar{
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 7vh;
-    /* background-color: rgb(0, 0, 0, 0.4); */
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  /* logo design */
-.logo{
-    color: rgb(224, 224, 224);
-    margin-left: 50px;
-    font-size: 30px;
-    font-family: 'Cherry Bomb One';
-  }
 .logo-first{
     color: orangered;
   }
   
-  /* nav list items */
-.nav-list{
-    display: flex;
-    margin-right: 10px;
-  }
-  
-.nav-list-items{
-    margin: 0 10px;
-    list-style: none;
-    font-size: 18px;
-  }
-.nav-list-items:hover{
-    cursor: pointer;
-    color: orangered;
-    font-weight: 900;
-  }
-  /* Homepage */
-.homepage{
-    height: 100vh;
-    width: 100vw;
-    
-  }
   /* Welcome Text */
 .welcome-text{
     position: absolute;
     width: 100vw;
     text-align: center;
-    top: 15%;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
+    /* top: 15%; */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     /* background-color: aliceblue; */
@@ -84,8 +45,8 @@ body{
   /* Authorization */
   .authorization {
     display: flex;
-    width: 350px;
-    margin: auto;
+    /* width: 350px; */
+    margin: 20px auto;
     justify-content: space-around;
     font-size: 15px;
     font-weight: 600;
@@ -97,6 +58,7 @@ body{
     border: 1px solid white;
     transition: 0.2s;
     text-decoration: none;
+    margin-right: 10px;
   }
   .sign-in:hover {
     background-color: rgb(255, 255, 255);
@@ -144,3 +106,18 @@ body{
     z-index: -1;
   }
   
+
+  @media screen and (max-width:700px) {
+    .greet-msg {
+      font-size: 30px;
+      color: rgb(229, 229, 229);
+    }
+    .site-name {
+      font-size: 40px;
+      font-family: "Cherry Bomb One", cursive;
+    }
+    .quote {
+      color: rgb(221, 221, 221);
+      font-size: 15px;
+    }
+  }

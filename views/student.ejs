@@ -72,43 +72,44 @@
             <h3>Personal Details</h3>
             <div class="form-data">
                 <label for="name" class="form-label">Name: </label>
-                <input type="text" name="name" placeholder="Joe Biden" />
+                <input id="name" type="text" name="name" placeholder="Joe Biden" required />
             </div>
             <div class="form-data">
-                <label for="name" class="form-label">Gender: </label>
-                <input type="radio" id="male" name="gender" value="male" class="">
+                <label for="gender" class="form-label">Gender: </label>
+                <input type="radio" id="male" name="gender" value="Male" class="" required />
                 <label for="male" class="small-label">Male</label>
 
-                <input type="radio" id="female" name="gender" value="female" class="">
+                <input type="radio" id="female" name="gender" value="Female" class="" required />
                 <label for="female" class="small-label">Female</label>
             </div>
             <div class="form-data">
                 <label for="dob" class="form-label">Date of Birth:</label>
-                <input type="date" name="dob">
-
-                <label for="age" class="small-label">Age: </label>
-                <input type="number" name="age" placeholder="99" max="50" min="15" />
+                <input type="date" name="dob" id="dob" required />
+            </div>
+            <div class="form-data">
+                <label for="age" class="form-label">Age: </label>
+                <input id="age" type="number" name="age" placeholder="99" max="50" min="15" required/>
             </div>
             <h3>Academic Details</h3>
             <div class="form-data">
                 <label for="college" class="form-label">College: </label>
-                <input type="text" name="college" placeholder="IIT" />
+                <input type="text" name="college" placeholder="IIT" id="college" required />
             </div>
             <div class="form-data">
                 <label for="batch" class="form-label">Batch: </label>
-                <input type="number" name="batch" placeholder="2020" />
+                <input type="number" name="batch" placeholder="2020" id="batch"  required/>
             </div>
             <div class="form-data">
                 <label for="dsa-score" class="form-label">DSA-Score: </label>
-                <input type="number" name="dsaScore" placeholder="Score out of 100" />
+                <input type="number" name="dsaScore" placeholder="Score out of 100" id="dsa-score" required/>
             </div>
             <div class="form-data">
                 <label for="webD-score" class="form-label">WebD-Score: </label>
-                <input type="number" name="webDScore" placeholder="Score out of 100" />
+                <input type="number" name="webDScore" placeholder="Score out of 100" id="webD-score" required />
             </div>
             <div class="form-data">
                 <label for="reactScore" class="form-label">React-Score: </label>
-                <input type="number" name="reactScore" placeholder="Score out of 100" />
+                <input type="number" name="reactScore" placeholder="Score out of 100" id="reactScore" required />
             </div>
 
             <button type="submit" class="create-student-btn">Create Student</button>
@@ -163,6 +164,7 @@
         <a class="delete-student">Delete Student</a>
     </div>
 
+    <script src="/assets/js/_sidebar.js"></script>
     <script src="/assets/js/student.js"></script>
 </body>
 

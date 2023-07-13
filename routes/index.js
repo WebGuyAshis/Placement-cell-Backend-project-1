@@ -7,12 +7,12 @@ const downloadController = require('../controllers/downloadController');
 
 router.get('/', homeController.home)
 // router.get('/dashboard',dashboardController.home )
-router.use('/employee', require('./employee'));
+router.use('/employee', passport.checkAuthentication, require('./employee'));
 
 router.use('/new', require('./employee'));
 
 router.use('/authorization', require('./authorization'))
 
-router.get('/download-students-csv', downloadController.downloadStudentsCSV)
+router.get('/download-students-csv', passport.checkAuthentication, downloadController.downloadStudentsCSV)
 
 module.exports = router;

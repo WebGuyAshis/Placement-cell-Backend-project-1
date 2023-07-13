@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
-    
+
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Custom Css -->
@@ -34,47 +34,48 @@
         <%- include('_topNavbar') %>
 
 
-        <div class="employee-section">
-            <!-- Side Navbar -->
-            <%- include('_sideNavbar') %>
+            <div class="employee-section">
+                <!-- Side Navbar -->
+                <%- include('_sideNavbar') %>
 
-            <div class="employee-dashboard">
-                <!-- Greet To Employee -->
-                <div class="greet-employee">
-                    Good Evening,
-                    <p>
-                        <%= name %>
-                    </p>
-                </div>
+                    <div class="employee-dashboard">
+                        <!-- Greet To Employee -->
+                        <div class="greet-employee">
+                            Welcome,
+                            <p>
+                                <%= name %>
+                            </p>
+                        </div>
 
-                <div class="tasks-card">
-                    <a href="/employee/students-page" class="add-student box">
-                        Students
-                        <i class="bi bi-arrow-right-circle-fill"></i>
-                    </a>
-    
-                    <a href="/employee/interviews-page" class="add-comapny box">
-                        Interview
-                        <i class="bi bi-arrow-right-circle-fill"></i>
-                    </a>
-                </div>
-            </div>
+                        <div class="tasks-card">
+                            <a href="/employee/students-page" class="add-student box">
+                                Students
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </a>
 
-            <div class="recently-placed-container">
-                <h3>Recently Placed</h3>
-            <ul class="recently-placed">
-                <li class="recently-placed-student">
-                    <img class="profile-pic" src="/assets/images/anime-boy.jpeg" alt="">
-                    <div class="student-card">
-                        <h5>Ashis Yadav</h5>
-                        <span class="work-company">Coding Ninjas</span>
+                            <a href="/employee/interviews-page" class="add-comapny box">
+                                Interview
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </a>
+                        </div>
                     </div>
-                        <img class="msg" src="/assets/images/icons/chat.png" alt="">
-                </li>
-            </ul>
-        </div>
-        </div>
+
+                    <!-- <div class="recently-placed-container">
+                        <h3>Recently Placed</h3>
+                        <ul class="recently-placed">
+                            <li class="recently-placed-student">
+                                <img class="profile-pic" src="/assets/images/anime-boy.jpeg" alt="">
+                                <div class="student-card">
+                                    <h5>Ashis Yadav</h5>
+                                    <span class="work-company">Coding Ninjas</span>
+                                </div>
+                                <img class="msg" src="/assets/images/icons/chat.png" alt="">
+                            </li>
+                        </ul>
+                    </div> -->
+            </div>
     </div>
+    <script src="/assets/js/_sidebar.js"></script>
 </body>
 
 </html>

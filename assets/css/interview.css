@@ -60,6 +60,9 @@ body{
 table{
     border-collapse: collapse;
     width: 100%;    
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(85, 12, 40);
 }
 /* table tr{
     padding: 5px 0;
@@ -76,8 +79,12 @@ table{
 border-right: 1px solid rgb(156, 156, 156);
 }
 
-tbody tr{
-    background-color: rgb(85, 85, 85);
+tbody tr:nth-child(even){
+    background-color: rgba(120, 120, 120, 0.6);
+    height: 40px;
+}
+tbody tr:nth-child(odd){
+    background-color: rgba(138, 138, 138, 0.6);
     height: 40px;
 }
 tbody td{
@@ -86,6 +93,23 @@ tbody td{
 }
 tbody tr:hover{
     background-color: rgb(56, 56, 56);
+}
+
+.update-interview-btn{
+    padding: 3px 7px;
+    outline: none;
+    border: none;
+    background-color: rgb(60, 180, 254);
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-interview{
+    padding: 3px 7px;
+    background-color: rgb(240, 31, 59);
+    color: aliceblue;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 /* assign Interview */
