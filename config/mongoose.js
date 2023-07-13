@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config()
 
-// mongoose.connect(process.env.mongoDBAtlas);
-mongoose.connect("mongodb+srv://developerashis99:gSlbbzdGZMlhuLRb@cluster0.3m2ngtn.mongodb.net/Placement-Cell");
+mongoose.connect(process.env.mongoDBAtlas);
 
 const db = mongoose.connection;
 
