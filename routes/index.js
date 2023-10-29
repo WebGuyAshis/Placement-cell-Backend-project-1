@@ -7,7 +7,7 @@ const downloadController = require('../controllers/downloadController');
 
 router.get('/', homeController.home)
 // router.get('/dashboard',dashboardController.home )
-router.use('/employee', passport.checkAuthentication, require('./employee'));
+router.use('/employee', require('./employee'));
 
 router.use('/new', require('./employee'));
 
